@@ -20,7 +20,7 @@ datagen = ImageDataGenerator(
 #Can use any library to read images but they need to be in an array form
 #If using keras load_img convert it to an array first
 m = 'C:/Users/user/Desktop/classes/cam/images - 2022-06-09T112827.736.jpg'
-x = io.imread(m);  #Array with shape (256, 256, 3)
+x = io.imread(m)
 print(m, "terminé")
 # Reshape the input image because ...
 #x: Input data to datagen.flow must be Numpy array of rank 4 or a tuple.
@@ -28,7 +28,7 @@ print(m, "terminé")
 x = x.reshape((1, ) + x.shape)  #Array with shape (1, 256, 256, 3)
 
 i = 0
-for batch in datagen.flow(x, batch_size=16,
+for _ in datagen.flow(x, batch_size=16,
                           save_to_dir='C:/Users/user/Desktop/classes/porteur_aug/',
                           save_prefix='aug',
                           save_format='jpg'):

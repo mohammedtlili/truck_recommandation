@@ -48,7 +48,7 @@ x = np.array(dataset)
 # Again, flow generates batches of randomly augmented images
 
 i = 0
-for batch in datagen.flow(x, batch_size=200,
+for _ in datagen.flow(x, batch_size=200,
                           save_to_dir='C:/Users/user/Desktop/classes/porteur_aug/',
                           save_prefix='aug',
                           save_format='jpg'):
